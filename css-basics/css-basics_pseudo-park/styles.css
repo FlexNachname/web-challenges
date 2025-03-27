@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Park-Styling */
+.park {
+  font-size: 32px;
+  margin: 16px;
+  border: 2px dashed silver;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: lightgoldenrodyellow;
+}
+
+/* Tier-Styling */
+.animal {
+  padding: 16px;
+  font-size: 32px;
+  border: 2px solid red;
+}
+
+/* Positionierung der Tiere */
+.animal.crocodile {
+  font-size: 32px;
+}
+
+.animal.giraffe {
+  text-align: center;
+  font-size: 32px;
+}
+
+.animal.dino {
+  text-align: right;
+  font-size: 32px;
+}
+
+/* Hover-Effekte für Farben */
+.animal.crocodile:hover {
+  background-color: lightblue;
+}
+
+.animal.giraffe:hover {
+  background-color: lightgreen;
+}
+
+.animal.dino:hover {
+  background-color: lightsalmon;
+}
