@@ -4,6 +4,7 @@
    ⬇
 */
 
+/* Allgemeine Stile */
 *,
 *::before,
 *::after {
@@ -64,34 +65,32 @@ li {
   margin: 0;
 }
 
-/*
-  Part 1
+/* Part 1 - Anpassungen für .user-Elemente innerhalb des aside */
+aside .user {
+  max-width: 250px; /* Reduziert die maximale Breite */
+  padding: 12px; /* Reduziert das Padding */
+  border-radius: 4px; /* Reduziert die border-radius */
+}
 
-  Make .user elements inside the aside smaller:
-    - reduce the max-width to 250px
-    - reduce the padding to 12px
-    - reduce the border-radius to 4px
-    - reduce the font-size of the .name to 16px
-    - reduce the font-size of the .bio to 12px
-    - set the margin of the .bio to "6px 0"
-    - reduce the font-size of the .location to 10px
-  
+aside .user .name {
+  font-size: 16px; /* Reduziert die Schriftgröße der .name */
+}
 
-  Make sure to not change the styles of the .user element anywhere else.
-  
-  To facilitate layout debugging, apply the 'debug' class to the <html> element. 
-  This triggers visual helper styles from 'debug.css' that outline structural elements
-  like <body>, <main>, <aside>, <ul>, and .user with labeled overlays for easy identification.
-*/
+aside .user .bio {
+  font-size: 12px; /* Reduziert die Schriftgröße der .bio */
+  margin: 6px 0; /* Setzt den Margin für die .bio */
+}
 
-/*
-  Part 2
+aside .user .location {
+  font-size: 10px; /* Reduziert die Schriftgröße der .location */
+}
 
-  For all .user elements inside an unordered list:
-    - hide the .bio
-    - align the .location to the left and set it's color to darkslategray
+/* Part 2 - Anpassungen für .user-Elemente in einer ungeordneten Liste */
+ul .user .bio {
+  display: none; /* Versteckt die .bio */
+}
 
-  Make sure to not change the styles of the .user element anywhere else.
-
-  💡 You can use the display property to hide elements.
-*/
+ul .user .location {
+  text-align: left; /* Richtet .location nach links aus */
+  color: darkslategray; /* Setzt die Farbe von .location */
+}
