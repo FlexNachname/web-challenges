@@ -19,6 +19,13 @@ h2 {
   color: #3f0097;
 }
 
+.profile {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile__image {
   object-fit: cover;
   border-radius: 999px;
@@ -30,6 +37,10 @@ h2 {
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .tech-stack__list-item {
