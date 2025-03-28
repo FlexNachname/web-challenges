@@ -5,11 +5,16 @@
 /* Task 1: First, we want to adjust how the size of our elements is calculated in CSS. Do you know how to switch from "content-box" to "border-box"? */
 
 /* Your solution */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
-/* Add selector */
- {
+/* Add selector -> body */
+body {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -20,32 +25,45 @@
 
 /* Task 3: Setting the line height to 1.5 is good for texts, for accessibility reasons, but it seems too much for headings. Let's change this by giving our headings a line height of 1.2. */
 
-/* Your solution */
-
-/* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside the next CSS rule:
-
-- Change the background color to white
-- Set the top margin to "0"
-- Add padding of 10px
-- Center the text of the heading
-*/
+/* Your solution h1, h2, h3 etc bekommen festgelegte größe */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
 
 .title {
   /* Your solution */
+  background-color: white;
+  /* - Change the background color to white */
+  margin-top: 0;
+  /* - Set the top margin to "0" */
+  padding: 10px;
+  /* - Add padding of 10px */
+  text-align: center;
+  /* - Center the text of the heading */
 }
 
 /* ------- Sections ------- */
 
-/* Task 5: Our page consists of two sections containing information about why Pokémon are cool and what the favorite Pokémon are. Let's style these sections:
-
-- Set a white background for our sections
-- Add padding of 20px and margin of 10px
-- A fancy add on: Add a solid 5px border with the color "orange" that is only visible on the left. Hint: Use "border-left". :)
-- Bonus:  The left border of the second section, which contains a list of favorite Pokémon, should have the color "gold". Hint: You may need a second CSS rule.
-*/
-
 section {
-  /* Your solution */
+  background-color: white;
+  /* - Set a white background for our sections */
+  padding: 20px;
+  /* - Add padding of 20px and margin of 10px */
+  margin: 10px;
+  /* - Add padding of 20px and margin of 10px */
+  border-left: 5px solid orange;
+  /* - A fancy add on: Add a solid 5px border with the color "orange" that is only visible 
+  on the left. Hint: Use "border-left". :) */
+}
+
+section:nth-of-type(2) {
+  /* Your solution -> border-left-color: gold */
+  border-left-color: gold;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -58,8 +76,10 @@ section {
 - Bonus: The border color of the "Favorite Pokémon" title should be "orange". Hint: You may need another CSS rule.
 */
 
-.subtitle {
+.subtitle.favorite {
   /* Your solution */
+  border-left-color: orange;
+  border-right-color: orange;
 }
 
 /* ------- List ------- */
@@ -67,14 +87,9 @@ section {
 /* Task 7: Finally, let's style our list with of favorite Pokémon. Which selector do we need? Also, add values for padding. */
 
 /* Add selector */
- {
+ul li {
   list-style: "🧡";
-  padding-left: /* Add value */ ;
-}
-
-/* Add selector */
- {
-  padding-left: /* Add value */ ;
+  padding-left: 10px /* Add value -> added value 10px */;
 }
 
 /* ------- The End -------- */
