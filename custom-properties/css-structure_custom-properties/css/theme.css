@@ -1,0 +1,11 @@
+:root {
+  --color-granite: darkgray;
+  --color-nemo: orange;
+  --color-foam: white;
+
+    /* - 
+``--color-foam` for the dark gray
+- `--color-nemo` for the orange
+- `--color-foam` for the white 
+    */
+  }
