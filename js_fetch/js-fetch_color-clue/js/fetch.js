@@ -23,30 +23,12 @@ export async function fetchNewColor() {
     const closestName = data.name.value;            // Der Name der nächsten benannten Farbe
 
     // Logge die extrahierten Werte
-    console.log("Hex-Wert der nächsten benannten Farbe:", closestHex);
-    console.log("Name der nächsten benannten Farbe:", closestName);
+    console.log("Hex-Wert der nächsten Farbe:", closestHex);
+    console.log("Name der nächsten Farbe:", closestName);
 
-    // Rufe setColorToGuess() auf, um die Farbe zu setzen
+    // Rufe setColorToGuess() auf, zum Farbe setzen
     setColorToGuess(closestHex, closestName);
   } catch (error) {
-    console.error("Fehler beim Abrufen oder Verarbeiten der Daten:", error);
+    console.error("Fehler:", error);
   }
 }
-  /**
-   * Hint 1:
-   * Use the fetch API to get the hex value and the name of the closest
-   * named color to the randomly generated `hexCode` from the color API.
-   * These values can be found in `.name.closest_named_hex` and
-   * `.name.value` properties of the response data respectively.
-   *
-   * Hint 2:
-   * Call the `setColorToGuess` function to set the color to guess.
-   * The function takes two arguments:
-   *  - the hex code of the closest named color
-   *  - and the name of the random color
-   */
-
-  // --v-- your code here --v--
-
-  // --^-- your code here --^--
-
