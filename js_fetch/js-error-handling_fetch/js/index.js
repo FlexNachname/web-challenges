@@ -7,9 +7,14 @@ const errorElement = document.querySelector("[data-js='error']");
 async function fetchUserData(url) {
   try {
     const response = await fetch(url);
+    const contentType = response.headers.get("content-type");
     // Wenn kein(!) erfolgreicher Statuscode (z. B. 404)
     if (!response.ok) {
       throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+    // Überprüfen, ob wir JSON wirklich bekommen
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error(`Expected JSON, but received content-type: ${contentType}`);
     }
 
     return await response.json();
