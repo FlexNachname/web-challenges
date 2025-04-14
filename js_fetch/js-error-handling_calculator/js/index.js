@@ -2,7 +2,8 @@ console.clear();
 
 const form = document.querySelector("form");
 const output = form.querySelector("output");
-const errorOutput = form.querySelector(".error");
+const errorOutput = document.querySelector(".error");
+
 
 const operations = {
   add: (a, b) => a + b,
