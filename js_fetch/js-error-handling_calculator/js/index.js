@@ -4,7 +4,6 @@ const form = document.querySelector("form");
 const output = form.querySelector("output");
 const errorOutput = document.querySelector(".error");
 
-
 const operations = {
   add: (a, b) => a + b,
   subtract: (a, b) => a - b,
